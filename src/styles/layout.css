@@ -42,19 +42,23 @@
 .auth-brand {
   display: flex;
   justify-content: center;
+  width: 100%;
+  min-width: 0;
 }
 
 .auth-brand-logo {
   display: block;
+  width: auto;
+  max-width: 100%;
   height: auto;
-  width: min(200px, 72vw);
-  max-height: 100px;
+  max-height: clamp(52px, 24vw, 100px);
   object-fit: contain;
 }
 
 .auth-card {
   width: 100%;
   max-width: 380px;
+  min-width: 0;
   display: grid;
   gap: 0.8rem;
 }
@@ -84,16 +88,17 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 100%;
+  min-width: 0;
   margin-bottom: 0.5rem;
 }
 
 .sidebar-brand-logo {
   display: block;
-  width: 100%;
-  max-width: 200px;
+  width: auto;
+  max-width: min(200px, 100%);
   height: auto;
-  max-height: 72px;
-  margin-inline: auto;
+  max-height: 64px;
   object-fit: contain;
 }
 
@@ -205,6 +210,25 @@
 
   .content-area {
     padding: 3.6rem 0.8rem 1rem;
+  }
+
+  .sidebar-brand-logo {
+    max-width: min(168px, calc(100% - 0.5rem));
+    max-height: 52px;
+  }
+}
+
+@media (max-width: 380px) {
+  .auth-wrapper {
+    padding: 0.65rem;
+  }
+
+  .auth-brand-logo {
+    max-height: clamp(44px, 20vw, 72px);
+  }
+
+  .auth-card-title {
+    font-size: 1.2rem;
   }
 }
 
