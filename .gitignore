@@ -25,3 +25,5 @@ dist-ssr
 
 # Local project documentation
 docs/
+!docs/
+!docs/*.md
