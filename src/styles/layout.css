@@ -39,12 +39,20 @@
 
 .sidebar-logout-btn {
   margin-top: auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
 }
 
 .nav-link {
   padding: 0.6rem 0.7rem;
   border-radius: 0.5rem;
   color: #d1d5db;
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-weight: 600;
 }
 
 .nav-link.active {

@@ -1,20 +1,30 @@
 import { NavLink } from 'react-router-dom'
+import {
+  FiBarChart2,
+  FiBox,
+  FiClipboard,
+  FiHome,
+  FiLogOut,
+  FiPackage,
+  FiShoppingCart,
+  FiUsers,
+} from 'react-icons/fi'
 import { useAuth } from '../context/useAuth'
 
 const adminLinks = [
-  { to: '/admin/dashboard', label: 'Dashboard' },
-  { to: '/admin/products', label: 'Products' },
-  { to: '/admin/inventory', label: 'Inventory' },
-  { to: '/admin/orders', label: 'Orders' },
-  { to: '/admin/reports', label: 'Reports' },
-  { to: '/admin/users', label: 'Users' },
+  { to: '/admin/dashboard', label: 'Dashboard', icon: FiHome },
+  { to: '/admin/products', label: 'Products', icon: FiBox },
+  { to: '/admin/inventory', label: 'Inventory', icon: FiPackage },
+  { to: '/admin/orders', label: 'Orders', icon: FiShoppingCart },
+  { to: '/admin/reports', label: 'Reports', icon: FiBarChart2 },
+  { to: '/admin/users', label: 'Users', icon: FiUsers },
 ]
 
 const staffLinks = [
-  { to: '/dashboard', label: 'Dashboard' },
-  { to: '/products', label: 'Products' },
-  { to: '/create-order', label: 'Create Order' },
-  { to: '/my-orders', label: 'My Orders' },
+  { to: '/dashboard', label: 'Dashboard', icon: FiHome },
+  { to: '/products', label: 'Products', icon: FiBox },
+  { to: '/create-order', label: 'Create Order', icon: FiShoppingCart },
+  { to: '/my-orders', label: 'My Orders', icon: FiClipboard },
 ]
 
 export default function Sidebar() {
@@ -37,19 +47,25 @@ export default function Sidebar() {
       </div>
 
       <nav className="nav-links">
-        {links.map((link) => (
-          <NavLink
-            key={link.to}
-            to={link.to}
-            className={({ isActive }) => (isActive ? 'nav-link active' : 'nav-link')}
-          >
-            {link.label}
-          </NavLink>
-        ))}
+        {links.map((link) => {
+          const Icon = link.icon
+
+          return (
+            <NavLink
+              key={link.to}
+              to={link.to}
+              className={({ isActive }) => (isActive ? 'nav-link active' : 'nav-link')}
+            >
+              <Icon aria-hidden="true" />
+              <span>{link.label}</span>
+            </NavLink>
+          )
+        })}
       </nav>
 
       <button className="btn btn-danger sidebar-logout-btn" type="button" onClick={handleLogout}>
-        Logout
+        <FiLogOut aria-hidden="true" />
+        <span>Logout</span>
       </button>
     </aside>
   )

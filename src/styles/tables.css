@@ -40,6 +40,11 @@
   background: #ffedd5;
 }
 
+.status-pill.danger {
+  color: #b91c1c;
+  background: #fee2e2;
+}
+
 .order-items-preview {
   display: grid;
   gap: 0.25rem;
