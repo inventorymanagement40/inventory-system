@@ -53,7 +53,7 @@ export default function AdminOrdersPage() {
   }
 
   return (
-    <section>
+    <section className="page-pale-cards">
       <h1>Orders</h1>
       {error && <p className="error-text">{error}</p>}
       {loading ? (

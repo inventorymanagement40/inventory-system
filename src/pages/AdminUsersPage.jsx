@@ -36,7 +36,7 @@ export default function AdminUsersPage() {
   }
 
   return (
-    <section>
+    <section className="page-pale-cards">
       <h1>User Management</h1>
       {error && <p className="error-text">{error}</p>}
       {loading ? (

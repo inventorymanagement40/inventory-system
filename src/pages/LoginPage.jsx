@@ -38,8 +38,11 @@ export default function LoginPage() {
   return (
     <div className="auth-wrapper">
       <form className="card auth-card" onSubmit={handleSubmit}>
-        <h1>Inventory Login</h1>
-        <p className="subtle-text">Sign in with your account.</p>
+        <div className="auth-brand">
+          <img src="/logo.png" alt="Inventory IMS" className="auth-brand-logo" />
+        </div>
+        <h1 className="auth-card-title">Sign in</h1>
+        <p className="subtle-text">Use your account email and password.</p>
         {notice && <p className="success-text">{notice}</p>}
         <input
           className="input"

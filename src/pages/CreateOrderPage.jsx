@@ -47,7 +47,7 @@ export default function CreateOrderPage() {
   }
 
   return (
-    <section>
+    <section className="page-pale-cards">
       <h1>Create Order</h1>
       {error && <p className="error-text">{error}</p>}
       {success && <p className="success-text">{success}</p>}

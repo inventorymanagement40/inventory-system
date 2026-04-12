@@ -43,7 +43,9 @@ export default function Sidebar({ isMobileOpen = false, onNavigate }) {
   return (
     <aside className={`sidebar ${isMobileOpen ? 'open' : ''}`}>
       <div>
-        <h2 className="brand">Inventory IMS</h2>
+        <div className="sidebar-brand">
+          <img src="/logo.png" alt="Inventory IMS" className="sidebar-brand-logo" />
+        </div>
         <p className="subtle-text" style={{ color: 'white' }}>{profile?.email ?? 'Signed in'}{role === 'admin' ? ' (admin)' : ''}</p>
       </div>
 

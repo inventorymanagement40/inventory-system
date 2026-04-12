@@ -35,7 +35,7 @@ export default function StaffProductsPage() {
   }, [products, searchTerm])
 
   return (
-    <section>
+    <section className="page-pale-cards">
       <h1>Products</h1>
       {error && <p className="error-text">{error}</p>}
       <input

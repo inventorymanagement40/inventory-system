@@ -42,7 +42,7 @@ export default function AdminInventoryPage() {
   }
 
   return (
-    <section>
+    <section className="page-pale-cards">
       <h1>Inventory Management</h1>
       {error && <p className="error-text">{error}</p>}
       {loading ? (

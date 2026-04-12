@@ -33,7 +33,7 @@ export default function AdminReportsPage() {
     lowStockCount === 0 ? 'Healthy' : lowStockCount <= 3 ? 'Watch list' : 'Action needed'
 
   return (
-    <section>
+    <section className="page-pale-cards">
       <h1>Reports</h1>
       {/* <p className="subtle-text">A quick snapshot of inventory and order performance.</p> */}
       <div className="stats-grid">

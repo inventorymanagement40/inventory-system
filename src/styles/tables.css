@@ -57,13 +57,13 @@
 
 .order-view-btn {
   width: 100%;
-  border-color: #1d4ed8;
+  border-color: #7a8f27;
   transition: transform 0.12s ease, box-shadow 0.15s ease;
 }
 
 .order-view-btn:hover {
   transform: translateY(-1px);
-  box-shadow: 0 6px 16px rgba(37, 99, 235, 0.24);
+  box-shadow: 0 6px 16px rgba(153, 179, 49, 0.35);
 }
 
 .order-details-modal {

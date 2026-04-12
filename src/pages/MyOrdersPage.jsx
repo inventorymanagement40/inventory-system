@@ -24,7 +24,7 @@ export default function MyOrdersPage() {
   }, [user?.id])
 
   return (
-    <section>
+    <section className="page-pale-cards">
       <h1>My Orders</h1>
       {error && <p className="error-text">{error}</p>}
       {loading ? (

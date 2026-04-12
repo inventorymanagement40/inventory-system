@@ -97,7 +97,7 @@ export default function AdminProductsPage() {
   }, [products, searchTerm])
 
   return (
-    <section>
+    <section className="page-pale-cards">
       <h1>Products Management</h1>
       {error && <p className="error-text">{error}</p>}
       <div className="row-actions">

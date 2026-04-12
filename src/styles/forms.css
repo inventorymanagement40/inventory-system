@@ -112,9 +112,14 @@
 }
 
 .btn-primary {
-  background: #2563eb;
-  color: #ffffff;
-  border-color: #2563eb;
+  background: #99b331;
+  color: #111827;
+  border-color: #99b331;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background: #8aa12c;
+  border-color: #7a8f27;
 }
 
 .btn-danger {
