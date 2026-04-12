@@ -39,3 +39,43 @@
   color: #9a3412;
   background: #ffedd5;
 }
+
+.order-items-preview {
+  display: grid;
+  gap: 0.25rem;
+}
+
+.money-cell {
+  white-space: nowrap;
+  font-weight: 600;
+}
+
+.order-view-btn {
+  width: 100%;
+  border-color: #1d4ed8;
+  transition: transform 0.12s ease, box-shadow 0.15s ease;
+}
+
+.order-view-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(37, 99, 235, 0.24);
+}
+
+.order-details-modal {
+  width: min(760px, 100%);
+  display: grid;
+  gap: 0.8rem;
+}
+
+.order-details-totals {
+  display: grid;
+  gap: 0.55rem;
+  padding-top: 0.6rem;
+  border-top: 1px solid #e5e7eb;
+}
+
+.order-details-totals > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
