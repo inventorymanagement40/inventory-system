@@ -27,20 +27,21 @@ const staffLinks = [
   { to: '/my-orders', label: 'My Orders', icon: FiClipboard },
 ]
 
-export default function Sidebar() {
+export default function Sidebar({ isMobileOpen = false, onNavigate }) {
   const { role, profile, logout } = useAuth()
   const links = role === 'admin' ? adminLinks : staffLinks
 
   const handleLogout = async () => {
     try {
       await logout()
+      onNavigate?.()
     } catch (error) {
       console.error(error.message)
     }
   }
 
   return (
-    <aside className="sidebar">
+    <aside className={`sidebar ${isMobileOpen ? 'open' : ''}`}>
       <div>
         <h2 className="brand">Inventory IMS</h2>
         <p className="subtle-text" style={{ color: 'white' }}>{profile?.email ?? 'Signed in'}{role === 'admin' ? ' (admin)' : ''}</p>
@@ -55,6 +56,7 @@ export default function Sidebar() {
               key={link.to}
               to={link.to}
               className={({ isActive }) => (isActive ? 'nav-link active' : 'nav-link')}
+              onClick={onNavigate}
             >
               <Icon aria-hidden="true" />
               <span>{link.label}</span>

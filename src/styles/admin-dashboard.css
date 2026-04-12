@@ -1,5 +1,6 @@
 .admin-dashboard {
   gap: 1rem;
+  overflow-x: hidden;
 }
 
 .admin-dashboard-topbar {
@@ -98,6 +99,10 @@
   font-size: 0.98rem;
 }
 
+.admin-kpi-grid .stat-card {
+  min-height: 108px;
+}
+
 .admin-sales-card .chart-wrapper {
   margin-top: 0.35rem;
 }
@@ -169,6 +174,14 @@
 }
 
 @media (max-width: 760px) {
+  .admin-dashboard {
+    gap: 0.8rem;
+  }
+
+  .admin-dashboard .card {
+    padding: 0.8rem;
+  }
+
   .admin-dashboard-topbar {
     flex-direction: column;
     align-items: stretch;
@@ -178,7 +191,64 @@
     justify-content: flex-end;
   }
 
+  .admin-kpi-grid {
+    grid-template-columns: 1fr;
+    gap: 0.7rem;
+  }
+
+  .admin-kpi-grid .stat-card h3 {
+    font-size: 0.9rem;
+  }
+
+  .admin-kpi-grid .stat-card strong {
+    font-size: 1.25rem;
+  }
+
+  .admin-widget-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .admin-widget-header .btn {
+    width: 100%;
+  }
+
   .admin-inventory-cards {
     grid-template-columns: 1fr;
+  }
+
+  .admin-sales-card .chart-wrapper {
+    overflow-x: hidden;
+  }
+
+  .admin-sales-card .chart-wrapper > div {
+    min-width: 0;
+    width: 100% !important;
+  }
+
+  .admin-dashboard .table-wrapper {
+    overflow-x: hidden;
+  }
+
+  .admin-dashboard .table {
+    min-width: 0;
+    table-layout: fixed;
+    font-size: 0.82rem;
+  }
+
+  .admin-dashboard .table th,
+  .admin-dashboard .table td {
+    padding: 0.45rem;
+    word-break: break-word;
+  }
+}
+
+@media (max-width: 480px) {
+  .admin-kpi-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-dashboard-userbox {
+    font-size: 0.9rem;
   }
 }
