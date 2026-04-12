@@ -1,0 +1,41 @@
+.table-wrapper {
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 620px;
+}
+
+.table th,
+.table td {
+  border-bottom: 1px solid #e5e7eb;
+  padding: 0.65rem;
+  text-align: left;
+  vertical-align: top;
+}
+
+.table th {
+  color: #4b5563;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.status-pill {
+  display: inline-block;
+  border-radius: 999px;
+  font-size: 0.82rem;
+  padding: 0.2rem 0.6rem;
+}
+
+.status-pill.ok {
+  color: #065f46;
+  background: #d1fae5;
+}
+
+.status-pill.warning {
+  color: #9a3412;
+  background: #ffedd5;
+}
