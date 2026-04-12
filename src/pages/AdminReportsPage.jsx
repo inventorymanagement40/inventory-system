@@ -35,7 +35,7 @@ export default function AdminReportsPage() {
   return (
     <section>
       <h1>Reports</h1>
-      <p className="subtle-text">A quick snapshot of inventory and order performance.</p>
+      {/* <p className="subtle-text">A quick snapshot of inventory and order performance.</p> */}
       <div className="stats-grid">
         <article className="card stat-card">
           <h3>Catalog Size</h3>

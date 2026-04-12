@@ -77,7 +77,7 @@ export default function AdminDashboardPage() {
   return (
     <section>
       <h1>Admin Dashboard</h1>
-      <div className="stats-grid">
+      <div className="stats-grid dashboard-stats-grid">
         <article className="card stat-card">
           <h3>Total Products</h3>
           <strong>{stats.products}</strong>

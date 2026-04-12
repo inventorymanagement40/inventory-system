@@ -44,7 +44,7 @@ export default function StaffDashboardPage() {
   return (
     <section>
       <h1>Staff Dashboard</h1>
-      <div className="stats-grid">
+      <div className="stats-grid dashboard-stats-grid">
         <article className="card stat-card">
           <h3>Products</h3>
           <strong>{stats.products}</strong>

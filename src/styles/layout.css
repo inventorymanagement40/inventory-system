@@ -20,7 +20,7 @@
 }
 
 .sidebar {
-  background: #111827;
+  background: #132017;
   color: #f9fafb;
   padding: 1rem;
   display: flex;
@@ -53,6 +53,7 @@
 }
 
 .content-area {
+  background: #6d802f;
   padding: 1.2rem;
 }
 

@@ -33,7 +33,7 @@ export default function Sidebar() {
     <aside className="sidebar">
       <div>
         <h2 className="brand">Inventory IMS</h2>
-        <p className="subtle-text">{profile?.email ?? 'Signed in'}{role === 'admin' ? ' (admin)' : ''}</p>
+        <p className="subtle-text" style={{ color: 'white' }}>{profile?.email ?? 'Signed in'}{role === 'admin' ? ' (admin)' : ''}</p>
       </div>
 
       <nav className="nav-links">

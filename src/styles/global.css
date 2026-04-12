@@ -55,7 +55,7 @@ section {
 }
 
 .subtle-text {
-  color: #6b7280;
+  color: black;
   font-size: 0.9rem;
 }
 
@@ -79,6 +79,30 @@ section {
   display: block;
   font-size: 1.5rem;
   margin-top: 0.4rem;
+}
+
+.dashboard-stats-grid .stat-card:nth-child(1) {
+  background: #102d1e;
+  border-color: #102d1e;
+  color: #f9fafb;
+}
+
+.dashboard-stats-grid .stat-card:nth-child(2) {
+  background: #225437;
+  border-color: #225437;
+  color: #f9fafb;
+}
+
+.dashboard-stats-grid .stat-card:nth-child(3) {
+  background: #8ba03a;
+  border-color: #8ba03a;
+  color: #111827;
+}
+
+.dashboard-stats-grid .stat-card:nth-child(4) {
+  background: #c7e06a;
+  border-color: #c7e06a;
+  color: #111827;
 }
 
 .simple-list {
